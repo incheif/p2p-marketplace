@@ -1,2 +1,49 @@
-# p2p-marketplace
-On Solana with solanapay functionality
+# P2P Marketplace build on Solana Blockchain
+
+![building-store](https://user-images.githubusercontent.com/96371303/215303732-b95caef4-f19c-435f-a866-ebee3d091866.svg)
+
+<img width="727" alt="image" src="https://user-images.githubusercontent.com/96371303/215309904-cef1f671-db7d-4677-b188-770ab74d56cd.png">
+
+Built On Solana with solanapay functionality
+
+
+No-code Point of sale system for local merchants and shopkeepers to onboard users easily 
+
+Features 
+
+Connect using phantom wallet
+
+<img width="1280" alt="image" src="https://user-images.githubusercontent.com/96371303/215306356-72a8382c-4f32-4ec1-82a6-cbed7064e1b9.png">
+
+ Coin-exchange to swap your crypto to sol tokens
+
+<img width="1277" alt="Screenshot 2023-01-29 102808" src="https://user-images.githubusercontent.com/96371303/215306132-b4476129-eda0-44fb-912a-a85f8717d459.png">
+
+Marketplace
+
+<img width="1278" alt="Screenshot 2023-01-29 103124" src="https://user-images.githubusercontent.com/96371303/215306264-32059f50-0a00-46f5-94c9-4529085543ff.png">
+ 
+
+
+Shedule one-to-one meeting for final payment
+
+<img width="1280" alt="Screenshot 2023-01-29 102946" src="https://user-images.githubusercontent.com/96371303/215306189-e67016e0-f494-44d6-bc3d-be337f8e6f60.png">
+
+Payment QR code
+
+<img width="1280" alt="Screenshot 2023-01-29 103314" src="https://user-images.githubusercontent.com/96371303/215306144-3cb20782-8d57-4f8e-9f74-a17eef6a5180.png">
+
+For merchant to add his product
+
+<img width="1280" alt="Screenshot 2023-01-29 103201" src="https://user-images.githubusercontent.com/96371303/215306290-0dce0664-7c59-47d6-89a7-729b08085a21.png">
+
+The Transfer request follows  this mechanism 
+
+![image](https://user-images.githubusercontent.com/95926324/215766384-940c1677-fcc7-4962-892e-a50e3419a86f.png)
+
+* Customer goes to the payment page
+* Merchant frontend (client) sends order information to the backend
+* Merchant backend (server) generates a reference public key and stores it in a database with the expected amount for the shopping cart / pending purchase (unique to each customer's checkout session).
+* Merchant backend redirects the user to the confirmation page with the generated reference public key.
+* The confirmation page redirects to the merchant with the transaction signature.
+* Merchant backend checks that the transaction is valid for the checkout session by validating the transaction with the reference and amount stored in step 3.
